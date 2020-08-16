@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
+    "test:answer": "jest --verbose --testRegex .test-answer.js",
+    "test:all": "jest --verbose --testRegex \"\\.test(-answer)?\\.js$\"",
     "lint": "eslint \"**/*.js\" && npm run prettier",
     "prettier": "prettier --list-different \"**/*.{js,json}\"",
     "prettify": "prettier --write \"**/*.{js,json}\""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run test"
+      "pre-commit": "npm run lint && npm run test:all"
     }
   },
   "keywords": [],
