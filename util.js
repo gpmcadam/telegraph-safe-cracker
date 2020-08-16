@@ -42,6 +42,10 @@ const uniqueNumbers = (num) => {
   return num.filter((n, i) => num.indexOf(n) === i).length === num.length;
 };
 
+function sumOf(arr) {
+  return arr.reduce((a, b) => a + b, 0);
+}
+
 module.exports = {
   isPrime,
   generateTwoDigitPrimes,
@@ -49,4 +53,5 @@ module.exports = {
   twoDigitPrimes,
   uniqueNumbers,
   validRange,
+  sumOf,
 };
