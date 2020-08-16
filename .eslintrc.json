@@ -1,0 +1,16 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "expect": "readonly",
+    "test": "readonly",
+    "describe": "readonly"
+  },
+  "extends": ["eslint:recommended", "plugin:import/errors"],
+  "plugins": ["import"],
+  "rules": {
+    "import/order": ["error", { "newlines-between": "always" }]
+  }
+}

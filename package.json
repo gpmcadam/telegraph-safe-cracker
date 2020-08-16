@@ -1,0 +1,27 @@
+{
+  "name": "telegraph-code-break",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint \"**/*.js\" && npm run prettier",
+    "prettier": "prettier --list-different \"**/*.{js,json}\"",
+    "prettify": "prettier --write \"**/*.{js,json}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-plugin-import": "^2.22.0",
+    "husky": "^4.2.5",
+    "jest": "^26.2.2",
+    "prettier": "^2.0.5"
+  }
+}
